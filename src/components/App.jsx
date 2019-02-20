@@ -10,7 +10,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      character: null
+      character: null,
+      hunger: 10,
+      sleep: 10,
+      happy: "happy"
     };
     this.handleAddingCharacter = this.handleAddingCharacter.bind(this);
   }
@@ -18,6 +21,11 @@ class App extends React.Component {
   handleAddingCharacter(character){
     this.setState({character: character});
   }
+
+  // handleHunger(){
+  //
+  //   this.setState({})
+  // }
 
   render(){
     let visibleContent = null;
@@ -28,7 +36,7 @@ class App extends React.Component {
     }
     return (
       <div>
-        <Header/>
+        <Header happy={this.state.happy} hunger={this.state.hunger} sleep={this.state.sleep}/>
         {visibleContent}
       </div>
     );
