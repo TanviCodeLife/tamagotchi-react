@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Moment from 'moment';
+import { v4 } from 'uuid';
 
 function CharacterList(props){
   let _chosenCharacter = null
 
   function handleChoosenCharacter(event){
     event.preventDefault();
-    props.onAddingCharacter(_chosenCharacter.value)
+    props.onAddingCharacter({name: _chosenCharacter.value, hunger: 10, sleep: 10, happy: true, lifeTime: new Moment(), id: v4()});
   }
 
   return (

@@ -11,18 +11,16 @@ function Header(props){
   return (
     <div>
       <ul style={headerStyle}>
-        <li>{props.hunger}</li>
-        <li>{props.sleep}</li>
-        <li>{props.happy}</li>
+        <li>{props.onSetCharacter.hunger}</li>
+        <li>{props.onSetCharacter.sleep}</li>
+        <li>{props.onSetCharacter.happy}</li>
       </ul>
     </div>
   );
 }
 
 Header.propTypes = {
-  hunger: PropTypes.number.isRequired,
-  sleep: PropTypes.number.isRequired,
-  happy: PropTypes.string.isRequired
+  onSetCharacter: PropTypes.object
 }
 
 export default Header;
