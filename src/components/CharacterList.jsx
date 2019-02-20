@@ -8,7 +8,10 @@ function CharacterList(props){
 
   function handleChoosenCharacter(event){
     event.preventDefault();
-    props.onAddingCharacter({name: _chosenCharacter.value, hunger: 10, sleep: 10, happy: true, lifeTime: new Moment(), id: v4()}, {banana: 5, stew: 2, apple: 3}, {naps: 10}, {bike: 3, book: 3, sun: 4});
+    props.onAddingCharacter({name: _chosenCharacter.value, hunger: 10, sleep: 10, happy: true, lifeTime: new Moment(), id: v4()},
+    [{banana: '\u{1f34c}', score: 1, q: 4}, {stew: '\u{1f372}', score: 3, q: 2}, {apple: '\u{1f34e}', score: 2, q: 3}],
+    {naps: '\u{1f31a}', score: 1, q: 10},
+    [{bike: '\u{1f6b4}', score: 2, q: 4}, {book: '\u{1f4d5}', score: 1, q: 6}, {sun: '\u{1f31e}', score: 3, q: 3}]);
   }
 
   return (
