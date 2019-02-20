@@ -45,22 +45,20 @@ class App extends React.Component {
     this.setState({character: newCharacter});
   }
 
-  // handleHunger(){
-  //
-  //   this.setState({})
-  // }
-
   render(){
     let visibleContent = null;
-
     if(this.state.character.name === undefined){
         visibleContent = <CharacterList onAddingCharacter={this.handleAddingCharacter}/>;
     } else {
-      visibleContent = <Tamagotchi />;
+      visibleContent =
+      <div>
+        <Header onSetCharacter={this.state.character}/>
+        <Tamagotchi />
+      </div>;
     }
     return (
       <div>
-        <Header onSetCharacter={this.state.character}/>
+
         {visibleContent}
       </div>
     );
