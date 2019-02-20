@@ -10,7 +10,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      character: {}
+      character: {},
+      pantrty: {},
+      play: {},
+      naps: {}
     };
     this.handleAddingCharacter = this.handleAddingCharacter.bind(this);
     this.updateLifeTime = this.updateLifeTime.bind(this);
