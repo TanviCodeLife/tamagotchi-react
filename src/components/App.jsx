@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 import CharacterList from './CharacterList';
 import Tamagotchi from './Tamagotchi';
-import CarePackage from './CarePackage';
+import GamePlay from './GamePlay';
 import Moment from 'moment';
 
 class App extends React.Component {
@@ -13,7 +13,7 @@ class App extends React.Component {
       character: {},
       pantry: [],
       play: [],
-      naps: {}
+      naps: []
     };
     this.handleAddingCharacter = this.handleAddingCharacter.bind(this);
     this.updateLifeTime = this.updateLifeTime.bind(this);
@@ -58,7 +58,7 @@ class App extends React.Component {
       visibleContent =
       <div>
         <Header onSetCharacter={this.state.character}/>
-        <CarePackage pantry={this.state.pantry}
+        <GamePlay pantry={this.state.pantry}
           play={this.state.play}
           naps={this.state.naps}
           />

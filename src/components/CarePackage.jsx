@@ -2,31 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function CarePackage(props){
-
-  // showfood(food){
-  //   let foodArray = [];
-  //   for(let i = 0; i < food; i++){
-  //     if (food === 'banana'){
-  //       foodArray.push(🍌)
-  //     } else if (food === 'stew'){
-  //       foodArray.push(🍲)
-  //     }
-  //   }
-  // }
-  console.log(props);
-
   return(
     <div>
+      <p>P-tag: {props.game[0].emoji}</p>
       <ul>
+        {props.game.map((item) =>
+
+        <li>{item.emoji}
+          <p>P-tag-li: {item.emoji}</p>
+        </li>
+
+      )}
       </ul>
+
     </div>
   )
 }
 
 CarePackage.propTypes ={
-  pantry: PropTypes.array,
-  naps: PropTypes.object,
-  play: PropTypes.array
+  game: PropTypes.object
 }
+
 
 export default CarePackage;
